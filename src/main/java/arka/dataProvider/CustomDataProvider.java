@@ -19,4 +19,12 @@ public class CustomDataProvider
 		
 		return arr;
 	}
+	
+	@DataProvider(name="taskData")
+	public static Object[][] getTaskData()
+{
+	Object arr[][]=ExcelReader.getData("Task");
+	
+	return arr;
+}
 }

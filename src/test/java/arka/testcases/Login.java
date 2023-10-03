@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import arka.base.BaseClass;
 import arka.dataProvider.CustomDataProvider;
+import arka.pages.AddTask;
 import arka.pages.Leadspage;
 import arka.pages.Loginpagen;
 
@@ -29,5 +30,16 @@ public class Login extends BaseClass
 		Leadspage leadspage = new Leadspage(driver);
 		leadspage.addLead(name,owner, email,phnNo, property, leadSource, pipeline, stage,address,cost);
 		Assert.assertTrue(leadspage.leadGenerated(),"New lead generated");
+	}
+	
+	@Test(dataProvider = "taskData",dataProviderClass = CustomDataProvider.class)
+	public void addTask(String uname,String pass,String taskname,String startDate,String dueDate,String leadName,String taskDescription)
+	{
+
+		Loginpagen login=new Loginpagen(driver);
+		login.loginToApplication(uname,pass);
+		AddTask addTask=new AddTask(driver);
+		
+		addTask.addTask(taskname, startDate, dueDate, leadName, taskDescription);
 	}
 }

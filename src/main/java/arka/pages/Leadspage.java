@@ -53,7 +53,7 @@ private By createBtn=By.xpath("//button[@class='el-button leadBtn el-button--pri
 private By leadGenerated=By.xpath("//p[@class='name']");
 
 public void addLead(String lName,String lOwner,String lEmail,String lPhnNo,String lProperty,String leadSource,String lPipeline,String lStage,String lAddress,String lcost)
-{fullName=lName;
+{ fullName=lName;
 	Utility.waitForWebElement(driver, leadIcon).click();
 	Utility.waitForWebElement(driver, createLead).click();
 	Utility.waitForWebElement(driver, name).sendKeys(lName);
