@@ -266,7 +266,7 @@ public class Utility
 		for(WebElement ele:allValues)
 		{
 			if(ele.getText().contains(elementToSearch)) {
-				wait(2);
+				wait(3);
 				ele.click();
 				break;
 			}

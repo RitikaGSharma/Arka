@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-02T10:46:03 IST" name="Default suite" finished-at="2023-10-02T10:47:01 IST" duration-ms="58268">
+  <suite started-at="2023-10-03T18:15:38 IST" name="Default suite" finished-at="2023-10-03T18:16:47 IST" duration-ms="68930">
     <groups>
     </groups>
-    <test started-at="2023-10-02T10:46:03 IST" name="Default test" finished-at="2023-10-02T10:47:01 IST" duration-ms="58268">
+    <test started-at="2023-10-03T18:15:38 IST" name="Default test" finished-at="2023-10-03T18:16:47 IST" duration-ms="68930">
       <class name="arka.testcases.Login">
-        <test-method is-config="true" signature="setupApplication()[pri:0, instance:arka.testcases.Login@58cbafc2]" started-at="2023-10-02T10:46:03 IST" name="setupApplication" finished-at="2023-10-02T10:46:15 IST" duration-ms="11903" status="PASS">
+        <test-method is-config="true" signature="setupApplication()[pri:0, instance:arka.testcases.Login@58cbafc2]" started-at="2023-10-03T18:15:38 IST" name="setupApplication" finished-at="2023-10-03T18:15:53 IST" duration-ms="14641" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupApplication -->
-        <test-method signature="addNewLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:arka.testcases.Login@58cbafc2]" started-at="2023-10-02T10:46:17 IST" name="addNewLead" data-provider="leadData" finished-at="2023-10-02T10:47:00 IST" duration-ms="43343" status="FAIL">
+        <test-method signature="addNewLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:arka.testcases.Login@58cbafc2]" started-at="2023-10-03T18:15:55 IST" name="addNewLead" data-provider="leadData" finished-at="2023-10-03T18:16:47 IST" duration-ms="51774" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,7 +50,7 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[Marketing Campaigns]]>
+                <![CDATA[Referral]]>
               </value>
             </param>
             <param index="8">
@@ -60,66 +60,24 @@
             </param>
             <param index="9">
               <value>
-                <![CDATA[Lead]]>
+                <![CDATA[Proposal]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Chandigarh]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[1000000.0]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@placeholder='Select a Stage'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49557}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49557/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 20874faa275c173427747b429c614c83]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@placeholder='Select a Stage'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49557}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49557/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 20874faa275c173427747b429c614c83
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at arka.helper.Utility.waitForWebElement(Utility.java:34)
-at arka.pages.Leadspage.addLead(Leadspage.java:61)
-at arka.testcases.Login.addNewLead(Login.java:30)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewLead -->
-        <test-method is-config="true" signature="tearDownApplication()[pri:0, instance:arka.testcases.Login@58cbafc2]" started-at="2023-10-02T10:47:00 IST" name="tearDownApplication" finished-at="2023-10-02T10:47:01 IST" duration-ms="708" status="PASS">
+        <test-method is-config="true" signature="tearDownApplication()[pri:0, instance:arka.testcases.Login@58cbafc2]" started-at="2023-10-03T18:16:47 IST" name="tearDownApplication" finished-at="2023-10-03T18:16:47 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownApplication -->
