@@ -57,8 +57,9 @@ public class AddTaskpage {
 		String filePath= path+"/TestData/demo.png";
 		System.out.println(filePath);
 		//Utility.waitForWebElement(driver, selectFile).sendKeys(filePath);
-		Utility.wait(2);
-		driver.findElement(selectFile).sendKeys(filePath);
+		//Utility.wait(2);
+		//driver.findElement(selectFile).sendKeys(filePath);
+		Utility.waitForWebElement(driver, selectFile).sendKeys(filePath);
 		Utility.waitForWebElement(driver, uploadSaveBtn).click();
 		Utility.waitForWebElement(driver, uploadDelBtn).isDisplayed();
 		Utility.waitForWebElement(driver, createTaskBtn).click();
