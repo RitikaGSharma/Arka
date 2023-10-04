@@ -54,7 +54,7 @@ public class AddTaskpage {
 		Utility.waitForWebElement(driver, taskDescription).sendKeys(lTaskDescription);
 		Utility.waitForWebElement(driver, fileUploadIcon).click();
 		String path=System.getProperty("user.dir");
-		String filePath= path+"/TestData/demo.png";
+		String filePath= path+"//TestData//demo.png";
 		System.out.println(filePath);
 		//Utility.waitForWebElement(driver, selectFile).sendKeys(filePath);
 		Utility.wait(2);
