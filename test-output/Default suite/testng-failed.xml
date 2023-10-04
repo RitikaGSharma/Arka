@@ -8,6 +8,7 @@
           <include name="tearDownApplication"/>
           <include name="setupApplication"/>
           <include name="addTask" invocation-numbers="0"/>
+          <include name="loginWithValidCredentials" invocation-numbers="0"/>
         </methods>
       </class> <!-- arka.testcases.Login -->
     </classes>

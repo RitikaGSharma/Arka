@@ -15,9 +15,8 @@ public class Leadspage
 {
 	
 	WebDriver driver;
-	String fullName=""
-			+ ""
-			+ "";
+	String fullName="";
+			
 	
 	 public Leadspage(WebDriver driver) 
 	 {
