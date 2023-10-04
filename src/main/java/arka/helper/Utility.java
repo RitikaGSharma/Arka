@@ -118,7 +118,8 @@ public class Utility
 		
 		try 
 		{
-			Thread.sleep(second*1000);
+		//	Thread.sleep(second*1000);
+			Thread.sleep(200);
 		} catch (InterruptedException e) {
 			
 			System.out.println("Something Went Wrong");

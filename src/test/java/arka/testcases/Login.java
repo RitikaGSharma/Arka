@@ -3,9 +3,11 @@ package arka.testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.github.javafaker.Faker;
+
 import arka.base.BaseClass;
 import arka.dataProvider.CustomDataProvider;
-import arka.pages.AddTask;
+import arka.pages.AddTaskpage;
 import arka.pages.Leadspage;
 import arka.pages.Loginpagen;
 
@@ -33,13 +35,15 @@ public class Login extends BaseClass
 	}
 	
 	@Test(dataProvider = "taskData",dataProviderClass = CustomDataProvider.class)
-	public void addTask(String uname,String pass,String taskname,String startDate,String dueDate,String leadName,String taskDescription)
+	public void addTask(String uname,String pass,String lName,String startDate,String dueDate,String taskDescription)
 	{
 
 		Loginpagen login=new Loginpagen(driver);
 		login.loginToApplication(uname,pass);
-		AddTask addTask=new AddTask(driver);
-		
-		addTask.addTask(taskname, startDate, dueDate, leadName, taskDescription);
+		Faker faker=new Faker();
+		String taskname=faker.name().firstName();
+		AddTaskpage addTask=new AddTaskpage(driver);
+		addTask.addTask(lName, startDate, dueDate, taskDescription,taskname);
+		Assert.assertTrue(addTask.istaskCreated(taskname),"Task Created");
 	}
 }

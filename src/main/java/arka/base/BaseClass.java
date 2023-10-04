@@ -26,7 +26,7 @@ public class BaseClass {
 	{
 		System.out.println("LOG:INFO - Closing  Application");
 		
-	//	driver.quit();
+//driver.quit();
 		
 		System.out.println("LOG:INFO - Application Closed");
 	}
