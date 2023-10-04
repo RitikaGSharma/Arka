@@ -265,8 +265,9 @@ public class Utility
 		List<WebElement> allValues=driver.findElements(locator);
 		
 		for(WebElement ele:allValues)
-		{
+		{wait(2);
 			if(ele.getText().contains(elementToSearch)) {
+				
 				ele.click();
 				break;
 			}
