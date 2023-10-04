@@ -53,8 +53,8 @@ public class AddTaskpage {
 		Utility.selectValueFromList(driver, homeOwnerList, lName);
 		Utility.waitForWebElement(driver, taskDescription).sendKeys(lTaskDescription);
 		Utility.waitForWebElement(driver, fileUploadIcon).click();
-		String path=System.getProperty("user.dir");
-		String filePath= path+"\\TestData\\demo.png";
+		//String path=System.getProperty("user.dir");
+		String filePath= "/home/ubuntu/.jenkins/workspace/ArkaTest/TestData/demo.png";
 		System.out.println(filePath);
 		//Utility.waitForWebElement(driver, selectFile).sendKeys(filePath);
 		
