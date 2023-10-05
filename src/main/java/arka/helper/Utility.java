@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
@@ -165,24 +166,10 @@ public class Utility
 	
 	public static String getCurrentDate()
 	{
-		//SimpleDateFormat myformat=new SimpleDateFormat("HH_mm_ss_dd_MM_yyyy");
-		
-		//String newFormat=myformat.format(new Date());
-		//Date date = new Date();
-		//DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-	// Use Madrid's time zone to format the date in
-	//df.setTimeZone(TimeZone.getTimeZone("India/Calcutta"));
-		LocalDate currentDate = LocalDate.now();
-
-		String newFormat = currentDate.toString();
-	//	System.out.println("Date and time in Madrid: " + df.format(date));
-	//	If you want the local time zone of the computer that your program is running on, use:
-
-//df.setTimeZone(TimeZone.getDefault());
-//String newFormat=df.format(date);	
-System.out.println(newFormat);
-	//	LocalDateTime now = LocalDateTime.now(ZoneId.of("India/Calcutta"));
+		 LocalDateTime now = LocalDateTime.now();  
+	       // System.out.println("Before Formatting: " + now);  
+	        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  
+	        String newFormat = now.format(format);  
 return newFormat;
 	}
 	
