@@ -44,7 +44,7 @@ private By sourceList=By.xpath("//div[@x-placement='bottom-start']//ul[@class='e
 private By pipeLine=By.xpath("//input[@placeholder='Select a Pipeline']");
 private By pipeLineListBy=By.xpath("//div[@x-placement='bottom-start']//ul[@class='el-scrollbar__view el-select-dropdown__list']//li");
 private By stage=By.xpath("//input[@placeholder='Select a Stage']");
-private By stageList=By.xpath("//span[text()='Lead']//ancestor::ul//span");
+private By stageList=By.xpath("//li[normalize-space()=\"Proposal\"]//ancestor::div//ul//li");
 private By address=By.xpath("//input[@placeholder='Enter the property address']");
 private By addressChoice=By.xpath("//body/div[@class='pac-container pac-logo']/div[1]/span[2]");
 private By closeDate=By.xpath("//input[@placeholder='Select Date']");
