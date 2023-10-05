@@ -5,7 +5,10 @@ import java.io.File;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.idealized.Network.UserAgent;
+import org.openqa.selenium.remote.LocalFileDetector;
+import org.openqa.selenium.remote.RemoteWebElement;
 
 import arka.helper.Utility;
 
@@ -53,12 +56,22 @@ public class AddTaskpage {
 		Utility.selectValueFromList(driver, homeOwnerList, lName);
 		Utility.waitForWebElement(driver, taskDescription).sendKeys(lTaskDescription);
 		Utility.waitForWebElement(driver, fileUploadIcon).click();
-		//String path=System.getProperty("user.dir");
-		String filePath= "/home/ubuntu/.jenkins/workspace/ArkaTest/TestData/demo.png";
-		System.out.println(filePath);
+		String paths=System.getProperty("user.dir");
+		String filePath = paths +"/TestData/demo.png";
+		//System.out.println(filePath);
+	
+		
+		 WebElement ele= driver.findElement(selectFile);
+		LocalFileDetector detector = new LocalFileDetector();
+		String path =new File(filePath).getAbsolutePath();
+		File file = detector.getLocalFile(path);
+		((RemoteWebElement) ele).setFileDetector(detector);
+		ele.sendKeys(file.getAbsolutePath());
+		
+		
 		//Utility.waitForWebElement(driver, selectFile).sendKeys(filePath);
 		
-		driver.findElement(selectFile).sendKeys(filePath);
+		//driver.findElement(selectFile).sendKeys(filePath);
 		Utility.wait(2);
 		//Utility.waitForWebElement(driver, selectFile).sendKeys(filePath);
 		Utility.waitForWebElement(driver, uploadSaveBtn).click();
