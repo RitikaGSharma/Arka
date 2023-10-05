@@ -2,10 +2,14 @@ package arka.helper;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -160,11 +164,22 @@ public class Utility
 	
 	public static String getCurrentDate()
 	{
-		SimpleDateFormat myformat=new SimpleDateFormat("HH_mm_ss_dd_MM_yyyy");
+		//SimpleDateFormat myformat=new SimpleDateFormat("HH_mm_ss_dd_MM_yyyy");
 		
-		String newFormat=myformat.format(new Date());
-		
-		return newFormat;
+		//String newFormat=myformat.format(new Date());
+		Date date = new Date();
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+	// Use Madrid's time zone to format the date in
+	//	df.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
+
+	//	System.out.println("Date and time in Madrid: " + df.format(date));
+	//	If you want the local time zone of the computer that your program is running on, use:
+
+df.setTimeZone(TimeZone.getDefault());
+String newFormat=df.format(new Date());	
+	//	LocalDateTime now = LocalDateTime.now(ZoneId.of("India/Calcutta"));
+return newFormat;
 	}
 	
 	public static void captureScreenshot(WebDriver driver)
