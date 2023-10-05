@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
@@ -168,8 +169,12 @@ public class Utility
 	{
 		 LocalDateTime now = LocalDateTime.now();  
 	       // System.out.println("Before Formatting: " + now);  
+		 
+		 ZonedDateTime zonedUTC = now.atZone(ZoneId.of("UTC"));
+		// converting to IST
+		ZonedDateTime zonedIST = zonedUTC.withZoneSameInstant(ZoneId.of("Asia/Kolkata"));
 	        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  
-	        String newFormat = now.format(format);  
+	        String newFormat = zonedIST.format(format);  
 return newFormat;
 	}
 	
