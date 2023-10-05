@@ -171,13 +171,14 @@ public class Utility
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	// Use Madrid's time zone to format the date in
-	//	df.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
+	df.setTimeZone(TimeZone.getTimeZone("India/Calcutta"));
 
 	//	System.out.println("Date and time in Madrid: " + df.format(date));
 	//	If you want the local time zone of the computer that your program is running on, use:
 
-df.setTimeZone(TimeZone.getDefault());
-String newFormat=df.format(new Date());	
+//df.setTimeZone(TimeZone.getDefault());
+String newFormat=df.format(date);	
+
 	//	LocalDateTime now = LocalDateTime.now(ZoneId.of("India/Calcutta"));
 return newFormat;
 	}
