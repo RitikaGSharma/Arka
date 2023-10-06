@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDownApplication"/>
           <include name="setupApplication"/>
-          <include name="addNewLead" invocation-numbers="0"/>
+          <include name="addNewLead"/>
         </methods>
       </class> <!-- arka.testcases.Login -->
     </classes>
